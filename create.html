@@ -79,6 +79,10 @@
             text-align: center;
         }
 
+        .hidden {
+            display: none;
+        }
+
 
 
 
@@ -116,7 +120,7 @@
             <div class="form">
 
                 <label class="label" for="">List:</label>
-                <select for="list" name="listLabel" id="listLabel">
+                <select for="list" name="listLabel" id="list">
     
                     <option value="home">Home</option>
                     <option value="work">Work</option>
@@ -124,6 +128,9 @@
                 </select>
 
             </div>
+
+
+            <input type="text" id="newListLabel" placeholder="Enter List Label" class="hidden">
 
 
 
@@ -145,6 +152,27 @@
 
 
     </div>
+
+
+    <script>
+
+        let list = document.getElementById('list');
+
+        let newListLabel = document.getElementById('newListLabel');
+
+
+        list.onchange = function(event)  {
+
+            if (event.currentTarget.value == 'other') {
+
+                newListLabel.classList.remove('hidden');
+                console.log('hi');
+            }
+        }
+    
+
+
+    </script>
     
 </body>
 </html>
