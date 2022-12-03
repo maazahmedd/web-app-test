@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page </title>
+
+
+    <style>
+
+        body {
+            background-color: aliceblue;
+        }
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h3 {
+        }
+
+
+       
+
+        label {
+            display:block;
+            text-align: center;
+           
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+            
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+           
+        }
+
+        .label {
+            margin-bottom: 15px;
+        }
+
+        button {
+
+            width: 200px;
+            height: 36px;
+            border-radius: 18px;
+            background-color: #1c89ff;
+            border: solid 1px transparent;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 300;
+            cursor: pointer;
+            
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+            
+        }
+
+        label {
+            font-size: 1.2rem;
+        }
+
+        select {
+            width: 100%;
+            text-align: center;
+        }
+
+
+
+
+    </style>
+
+
+   
+
+   
+</head>
+<body>
+
+    <div id="content">
+        <h1> To-Do List </h1>
+
+        <h3> Create a New To-Do Item </h3>
+
+
+        <form action="">
+
+
+
+            <div class="form">
+                <label class="label" for="">Title:</label>
+                <input type="text" name="" id="" placeholder="Enter title here">
+            </div>
+           
+            <div class="form">
+                <label class="label" id='notesLabel' for=""> Notes: </label>
+                <textarea name="" id="" cols="20" rows="5" placeholder="Enter To-Do text here"></textarea>
+
+            </div>
+
+
+            <div class="form">
+
+                <label class="label" for="">List:</label>
+                <select for="list" name="listLabel" id="listLabel">
+    
+                    <option value="home">Home</option>
+                    <option value="work">Work</option>
+                    <option value="other">Other</option>
+                </select>
+
+            </div>
+
+
+
+            <button type="submit" id="submit"> Add To-Do</button>
+           
+
+          
+
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+</body>
+</html>

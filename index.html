@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <style>
+
+        a {
+            text-decoration: none;
+            
+            color: black;
+        }
+
+        #buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 20%;
+
+        }
+
+        #buttons > button {
+            width: 200px;
+            height: 36px;
+            border-radius: 18px;
+            background-color: #1c89ff;
+            border: solid 1px transparent;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 300;
+            cursor: pointer;
+            
+        }
+
+        button > a {
+            z-index: 1000;
+        }
+
+        #buttons > button:hover {
+
+            background-color: black;
+            color: white;
+            z-index: 0;
+        }
+
+        body {
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> Welcome to your new To-Do List! </h1>
+
+    <h3> Create a new To-Do List By Hitting the create button below, or view your To-Do lists by hitting the View All Button </h3>
+
+    <div id="buttons">
+
+        <button> <a href="create.html">Create a New To-Do </a>  </button>
+
+        <button> <a href="viewtodos.html"> View All Lists </a> </button>
+
+    </div>
+   
+    
+</body>
+</html>

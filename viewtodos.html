@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+
+        img {
+            margin: 0px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        
+        .toDoItem {
+            display: flex;
+            gap: 10px;
+
+        }
+
+        body {
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            background-color: aliceblue;;
+           
+        }
+
+        span {
+            font-size: 110%;
+        }
+
+        
+
+
+        
+
+
+        
+    </style>
+</head>
+<body>
+    <h1> All To-Do's</h1>
+
+    <hr>
+
+
+
+    <h2 class="title"> To-Do List Name </h2>
+
+    <div class="toDoItem">
+
+        <img class='checkbox' src="blank-check-box.png" alt="" width="20px" height="20px">
+
+
+        <div class="innerText">
+
+            <span class="todoText"> Text of To Do goes here  Due on : <span id="date"> 1/1/1111 </span></span>
+
+
+           
+            
+        </div>
+
+        
+
+    
+
+
+
+       
+
+
+
+
+    </div>
+
+    <br><br>
+
+  
+
+
+    <div class="toDoItem">
+
+        <img class='checkbox' src="blank-check-box.png" alt="" width="20px" height="20px">
+
+
+        <div class="innerText">
+
+            <span class="todoText"> Text of To Do goes here  Due on : <span id="date"> 1/1/1111 </span></span>
+
+
+           
+            
+        </div>
+
+        <hr>
+
+
+
+        
+
+       
+
+
+
+
+    </div>
+
+    <br><br>
+
+    <div class="toDoItem">
+
+        <img class='checkbox' src="blank-check-box.png" alt="" width="20px" height="20px">
+
+
+        <div class="innerText">
+
+            <span class="todoText"> Text of To Do goes here  Due on : <span id="date"> 1/1/1111 </span></span>
+
+
+           
+            
+        </div>
+
+        <hr>
+
+        
+
+       
+
+
+
+
+    </div>
+
+    <br><br><br>
+
+    <h2 class="title"> To-Do List #2 </h2>
+
+    <div class="toDoItem">
+
+        <img class='checkbox' src="blank-check-box.png" alt="" width="20px" height="20px">
+
+
+        <div class="innerText">
+
+            <span class="todoText"> Text of To Do goes here  Due on : <span id="date"> 11/01/2022 </span></span>
+
+
+           
+            
+        </div>
+
+        
+
+    
+
+
+
+       
+
+
+
+
+    </div>
+
+    <br><br>
+
+  
+
+
+    <div class="toDoItem">
+
+        <img class='checkbox' src="blank-check-box.png" alt="" width="20px" height="20px">
+
+
+        <div class="innerText">
+
+            <span class="todoText"> Text of To Do goes here  Due on : <span id="date"> 1/1/1111 </span></span>
+
+
+           
+            
+        </div>
+
+        <hr>
+
+
+
+        
+
+       
+
+
+
+
+    </div>
+
+    <br><br>
+
+    <div class="toDoItem">
+
+        <img class='checkbox' src="blank-check-box.png" alt="" width="20px" height="20px">
+
+
+        <div class="innerText">
+
+            <span class="todoText"> Text of To Do goes here  Due on : <span id="date"> 1/1/1111 </span></span>
+
+
+           
+            
+        </div>
+
+        <hr>
+
+        
+
+       
+
+
+
+
+    </div>
+
+    
+
+
+    <script>
+
+    
+
+        let checkbox = document.getElementsByClassName('checkbox');
+
+        let checked = false;
+
+        let checks = document.getElementsByClassName('checkbox');
+
+        console.log(checks);
+
+        for (let i=0;i<checks.length;i++) {
+
+            checks[i].addEventListener('click',function(){
+                if (checked == false) {
+                    checks[i].src = 'check.png';
+                    checked = true;
+
+                } else {
+                    checks[i].src = 'blank-check-box.png';
+                    checked=false;
+                }
+        
+                
+            })
+
+
+
+
+
+        }
+        
+
+        
+
+        
+
+        
+        
+
+
+      
+    </script>
+
+</body>
+</html>
