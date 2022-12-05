@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block container %}
+
+<h1> Welcome to your new To-Do List! </h1>
+
+<h3> Create a new To-Do List By Hitting the create button below, or view your To-Do lists by hitting the View All Button </h3>
+
+<div id="buttons">
+
+    <button> <a href="{{ url_for('create')}}">Create a New To-Do </a>  </button>
+
+    <button> <a href="{{ url_for('viewtodos')}}"> View All Lists </a> </button>
+
+</div>
+
+{% endblock %}

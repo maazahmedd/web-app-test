@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Do List</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        {% block container %} 
+        {% endblock %}
+      </main>
+    </div>
+  </body>
+</html>
