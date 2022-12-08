@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block container %}
+<form method="POST" action="{{ url_for('edit_todo', mongoid=mongoid) }}">
+
+    <div class="form">
+        <label class="label" for="">Title:</label>
+        <input type="text" name="title" id="" value="{{todo.title}}" required>
+    </div>
+    
+    <div class="form">
+        <label class="label" id='notesLabel' for=""> Notes: </label>
+        <textarea name="notes" id="" cols="20" rows="5" required>{{todo.notes}}</textarea>
+    </div>
+
+    <div class="form">
+        <label class="label" id='dueDate' for=""> Due Date: </label>
+        <input type="date" name="dueDate" id="" value="{{todo.dueDate}}" required>
+    </div>
+
+    <div class="form">
+        <label class="label" id='dueTime' for=""> Due Time: </label>
+        <input type="time" name="dueTime" id="" value="{{todo.dueTime}}" required>
+    </div>
+
+    <div class="form">
+        <label class="label" for="">List:</label>
+        <select for="list" name="listLabel" id="list" value="{{todo.listLabel}}">
+            <option value="home">Home</option>
+            <option value="work">Work</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <!-- <input type="text" id="newListLabel" placeholder="Enter List Label" class="hidden"> -->
+    <button type="submit" id="submit" name="post-btn" value="Add To-Do">Add To-do</button>
+
+</form>
+{% endblock %}

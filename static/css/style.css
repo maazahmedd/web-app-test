@@ -3,6 +3,7 @@
 body {
     background-color: aliceblue;
 }
+
 #content {
     display: flex;
     flex-direction: column;
@@ -68,8 +69,6 @@ select {
     display: none;
 }
 
-
-
 /* for index.html */
 
 a {
@@ -78,15 +77,21 @@ a {
     color: white;
 }
 
+.black {
+    color: black;
+}
+
 #buttons {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
     width: 20%;
-
 }
 
 #buttons > button {
+    margin: auto;
     width: 200px;
     height: 36px;
     border-radius: 18px;
@@ -96,8 +101,8 @@ a {
     font-size: 18px;
     font-weight: 300;
     cursor: pointer;
-    
 }
+
 
 #buttons > button:hover {
     background-color: black;
@@ -133,7 +138,7 @@ body {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: aliceblue;;
+    background-color: aliceblue;
    
 }
 

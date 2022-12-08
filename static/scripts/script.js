@@ -1,42 +1,48 @@
 // create.html
 let list = document.getElementById('list');
 
-let newListLabel = document.getElementById('newListLabel');
+if (list !== null) {
+    let newListLabel = document.getElementById('newListLabel');
 
-list.onchange = function(event)  {
+    list.onchange = function(event)  {
 
-    if (event.currentTarget.value == 'other') {
+        if (event.currentTarget.value == 'other') {
 
-        newListLabel.classList.remove('hidden');
-        console.log('hi');
-    } else {
-        newListLabel.classList.add('hidden');
+            newListLabel.classList.remove('hidden');
+            console.log('hi');
+        } else {
+            newListLabel.classList.add('hidden');
+        }
     }
 }
 
-
-
 // viewtodos.html
-let checkbox = document.getElementsByClassName('checkbox');
 
-let checked = false;
+
 
 let checks = document.getElementsByClassName('checkbox');
 
-console.log(checks);
+if (checks.length !== 0) {
 
-for (let i=0;i<checks.length;i++) {
+checked = []
 
-    checks[i].addEventListener('click',function(){
-        if (checked == false) {
-            checks[i].src = 'check.png';
-            checked = true;
+    for (let i = 0; i < checks.length; i++) {
+        checked.push(false);
+    }
 
-        } else {
-            checks[i].src = 'blank-check-box.png';
-            checked=false;
-        }
+    for (let i = 0; i < checks.length; i++) {
 
-        
-    })
+        checks[i].addEventListener('click', function(){
+            console.log('clicked');
+            if (checked[i] == false) {
+                checks[i].src = 'static/images/check.png';
+                checked[i] = true;
+
+            } else {
+                checks[i].src = 'static/images/blank-check-box.png';
+                checked[i] = false;
+            }
+        })
+    }
+
 }
