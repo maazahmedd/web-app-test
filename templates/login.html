@@ -1,28 +1,30 @@
 {% extends 'base.html' %} {% block container %}
 
-<h1>Welcome to your To-do List Collection</h1>
+<h1 class="head">Welcome to your To-do List Collection</h1>
 <hr>
 
-<h2>Welcome back!</h2>
-<p>Please submit the form to login.</p>
+<h2 class="welcome">Welcome back!</h2>
+<p class="please">Please submit the form to login.</p>
 <hr>
 
 <p class="error">Invalid username or password</p>
 
 <form method="POST" action="{{ url_for('process_login') }}">
 
-    <label for="user"><b>Username</b></label>
-    <input type="text" placeholder="Enter username" name="us" required>
+    <label for="user"><b></b></label>
+    <input id="username" type="text" placeholder="Enter Username" name="us" required>
 
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label for="psw"><b></b></label>
+    <input id="password" type="password" placeholder="Enter Password" name="psw" required>
 
     <div id="buttons">
         <button type="submit" class="login-btn">Login</button>
-        <button><a href="{{ url_for('signup')}}">Sign Up instead</a></button>
+        <a class="signup" href="{{ url_for('signup')}}">Sign Up instead</a>
     </div>
 </form>
+
+
 
 <script> 
     if ( '{{ error }}' == '1' ) {

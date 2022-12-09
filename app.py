@@ -54,7 +54,7 @@ def process_login():
 
     if (existing != None):
         session['username'] = us
-        return redirect(url_for('viewtodos'))
+        return redirect(url_for('index'))
 
     else:
         error = 1
@@ -98,6 +98,10 @@ def process_signup():
                 db.listUsers.insert_one({ "username": us, "password": psw, "first": fn, "last": ln, "email": email})
                 return redirect(url_for('login'))
 
+@app.route('/home')
+def index():
+    return render_template('index.html')
+
 @app.route('/create')
 def create():
     return render_template('create.html')
@@ -116,6 +120,7 @@ def create_post():
 
     # create a new document with the data the user entered
     todo = {
+        "username": session['username'],
         "title": title,
         "notes": notes, 
         "listLabel": listLabel,
@@ -149,6 +154,7 @@ def edit_todo(mongoid):
     dueTime = request.form['dueTime']
 
     todo = {
+        "username": session['username'],
         "title": title,
         "notes": notes, 
         "listLabel": listLabel,
@@ -175,7 +181,7 @@ def delete(mongoid):
 
 @app.route('/viewtodos')
 def viewtodos():
-    todos = db.todos.find({}).sort("created_at", -1) # sort in descending order of created_at timestamp
+    todos = db.todos.find({"username": session['username']}).sort("created_at", -1) # sort in descending order of created_at timestamp
     return render_template('viewtodos.html', todos=todos)
 
 # @app.errorhandler(Exception)
@@ -190,3 +196,7 @@ if __name__ == "__main__":
     #import logging
     #logging.basicConfig(filename='/home/ak8257/error.log',level=logging.DEBUG)
     app.run(debug = True)
+
+    app.jinja_env.auto_reload = True
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
+    app.run(debug=True, host='0.0.0.0')

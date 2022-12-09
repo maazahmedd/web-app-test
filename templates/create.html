@@ -2,36 +2,36 @@
 {% block container %}
 
 <div id="content">
-    <h1> To-Do List </h1>
+    <h1 class="head"> To-Do List </h1>
 
-    <h3> Create a New To-Do Item </h3>
+    <h3 class="please"> Create a New To-Do Item </h3>
 
 
     <form method="POST" action="">
 
         <div class="form">
             <label class="label" for="">Title:</label>
-            <input type="text" name="title" id="" placeholder="Enter title here" required>
+            <input class="form1" type="text" name="title" id="" placeholder="Enter title here" required>
         </div>
         
         <div class="form">
             <label class="label" id='notesLabel' for=""> Notes: </label>
-            <textarea name="notes" id="" cols="20" rows="5" placeholder="Enter To-Do text here" required></textarea>
+            <textarea class="form1" name="notes" id="" cols="20" rows="5" placeholder="Enter To-Do text here" required></textarea>
         </div>
 
         <div class="form">
             <label class="label" id='dueDate' for=""> Due Date: </label>
-            <input type="date" name="dueDate" id="" placeholder="Enter due date here" required>
+            <input class="form1" type="date" name="dueDate" id="" placeholder="Enter due date here" required>
         </div>
 
         <div class="form">
             <label class="label" id='dueTime' for=""> Due Time: </label>
-            <input type="time" name="dueTime" id="" placeholder="Enter due time here" required>
+            <input class="form1" type="time" name="dueTime" id="" placeholder="Enter due time here" required>
         </div>
 
         <div class="form">
             <label class="label" for="">List:</label>
-            <select for="list" name="listLabel" id="list">
+            <select class="form1" for="list" name="listLabel" id="list">
                 <option value="home">Home</option>
                 <option value="work">Work</option>
                 <option value="other">Other</option>
@@ -39,7 +39,7 @@
         </div>
 
         <input type="text" id="newListLabel" placeholder="Enter List Label" class="hidden">
-        <button type="submit" id="submit" name="post-btn" value="Add To-Do">Add To-do</button>
+        <button type="submit" id="submit" name="post-btn" value="Add To-Do"> Add To-Do</button>
     
     </form>
 
